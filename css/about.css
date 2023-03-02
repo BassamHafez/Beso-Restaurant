@@ -100,7 +100,8 @@ h1{
     margin:1.25rem;
 }
 .img-meal{
-position: relative;
+    position: relative;
+    margin: auto;
 }
 .meal-img{
     height: 9.375rem;
