@@ -103,7 +103,7 @@ function displayDetails(){
     detailsCartoona+=
     `
     <h1>${detailsArray.title}</h1>
-    <img src="${detailsArray.image_url}"></img>
+    <div class="m-auto"><img src="${detailsArray.image_url}" class="m-auto"></img></div>
     <p>${detailsArray.publisher}</p>
     <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Show ingredients <i class="fa-solid fa-angles-down"></i>
