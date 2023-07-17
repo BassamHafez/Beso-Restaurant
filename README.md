@@ -1,1 +1,2 @@
-#Beso-Restaurant is a full web page where you can order and watching many types of Food, made using html ,css and pure js,
+
+#Beso-Restaurant is a responsive web page where you can order and discover many types of Food, made using html ,css and vanilla js using api for foods.
