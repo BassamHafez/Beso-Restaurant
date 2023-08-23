@@ -8,9 +8,8 @@ var details=document.getElementById("details");
 var viewDetails=document.getElementById("viewDetails");
 var currentMeal;
 var reveals=document.querySelectorAll(".reveal");
-var reveal4=document.querySelector(".reveal4")
 var nav=document.querySelector(".navbar");
-var loadScreen=document.querySelector(".loading")
+var loadScreen=document.querySelector(".loading");
 
 
 document.onreadystatechange = function() {
@@ -66,26 +65,45 @@ document.onreadystatechange = function() {
         // })
 }
 
+
+function getRandomPrice(min, max) {
+
+    const randomDecimal = Math.random();
+    const randomNumber = randomDecimal * (max - min + 1) + min;
+    return Math.floor(randomNumber);
+  }
+
 function display() {
     var recipe = "";
     for (var i = 0; i < recipes.length; i++) {
         recipe += `
    
-        <div class=" col-sm-6 col-md-4">  
-        <div class="meal">
-        <div class="img-meal">
-          <img src="${recipes[i].image_url}" class="w-100 meal-img" alt="meal">
-          
-           <div class="recipe-title p-3">
-            <p class="title-p">${recipes[i].title}</p>
-             <div>
-                <a href=${recipes[i].source_url} target="_blank" class="btn my-1 ">Source</a>
-                <a href=# onclick="getDetails(${recipes[i].recipe_id})" class="btn my-1 " data-bs-toggle="modal" data-bs-target="#exampleModal">Details</a>
-              </div>
+        <div class=" col-sm-4 col-md-3">  
+            <div class="meal">
+              <div class="price"><p>${getRandomPrice(50, 500)}$</p></div>
+                <div class="img-meal">
+                  <div class="meal-layer d-flex flex-column justify-content-evenly align-items-center">
+                    <div><button>Order Now</button></div>
+                    <div class="stars d-flex justify-content-center align-items-center">
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star"></i>
+                         <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                  <img src="${recipes[i].image_url}" class="w-100 meal-img" alt="meal">
+                </div>
+                <div class="recipe-title p-3">
+                        <h6 class="main-title">${recipes[i].title}</h6>
+                        <div class="recipe-buttons">
+                            <a href=${recipes[i].source_url} target="_blank" class="btn my-1 ">Info</a>
+                            <a href=# onclick="getDetails(${recipes[i].recipe_id})" class="btn my-1 " data-bs-toggle="modal" data-bs-target="#exampleModal">View</a>
+                        </div>
+                </div>
+              
             </div>
-           </div>
-        </div>
-    </div>
+         </div>
         `
     }
 
@@ -129,7 +147,7 @@ function seperateIngredients(){
 }
 
 
-window.addEventListener("scroll",getReveal);
+
 
 let windoHeight=window.innerHeight;
 const revealPoint=150;
@@ -139,15 +157,22 @@ function getReveal(){
         let distanceTop=reveals[i].getBoundingClientRect().top;
         if(distanceTop<windoHeight-revealPoint){
             reveals[i].classList.add("showing");
+            if(reveals[i].classList.contains("reveal-meals")){
+                reveals[i].classList.add("show-meals");
+            }
         }
         else{
-            reveal4.classList.remove("showing");
+            reveals[i].classList.remove("showing");
+            if(reveals[i].classList.contains("reveal-meals")){
+                reveals[i].classList.remove("show-meals");
+            }
         }
     }    
     
 }
+window.addEventListener("scroll",getReveal);
 
-window.addEventListener('scroll',getNavScroll);
+
 
 function getNavScroll(){
     var scrolled=window.scrollY;
@@ -162,4 +187,6 @@ else if(scrolled<400){
 
 }
 }
+window.addEventListener('scroll',getNavScroll);
+
 
