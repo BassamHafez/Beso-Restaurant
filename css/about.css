@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Yeseva One', cursive;
 }
 body{
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #111424;
 }
+
 
 .loading{
     position:fixed;
@@ -27,51 +28,6 @@ body{
     width: 40%;
 }
 
-.home{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../images/landing\ img.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.first-caption{
-    margin-bottom: 2.5rem;
-    color: white !important;
-    font-family:sans-serif;
-}
-.first-caption img{
-    width: 9.375rem;
-    height: auto;
-    margin-bottom: 0.625rem;
-}
-h1{
-    font-family:fantasy;
-    color:#F2C010;
-}
-.caros-icon{
-    margin:0.625rem 0.625rem 0.625rem 1.875rem;
-    text-decoration:none;
-    color:white;
-    transition: all .5s;
-}
-.caros-icon:hover{
-    color: #EBA23A;
-}
-.carousel-first-p{
-    color: black;
-    background-color: rgba(255, 192, 203, 0.6);
-    width: 15.625rem;
-    border-radius: 0.3125rem;
-    margin: auto;
-}
-.carousel-last-p{
-    color:black;
-    background-color: rgba(255, 192, 203, 0.6);
-    width: 37.5rem;
-    border-radius: 0.3125rem;
-    margin: auto;
-}
 .pink{
     color: rgb(223, 25, 58);
 }
@@ -89,25 +45,107 @@ h1{
     font-weight: 800;
 }
 .nav-link:hover{
-    border-bottom: solid 0.0625rem #945f15;
-    color: #945f15!important;
+    border-bottom: solid 0.0625rem rgb(239, 167, 101);
+    color: rgb(239, 167, 101)!important;
     cursor:pointer;
 }
 
 .active{
-    color: #945f15 !important;
+    color: rgb(239, 167, 101) !important;
 }
 
 .nav-color{
     background-color: rgba(197, 175, 128, 0.664) !important;
   
 }
+
+
+
+
+.home{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.hero-layer{
+    background:linear-gradient(to bottom,#111424a9,#111424) ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+}
+.hero-caption{
+    position: absolute;
+    left:2%;
+    top: 60%;
+    transform: translateY(-60%);
+    width:50%;
+    z-index: 2;
+}
+.hero-title{
+    color:rgb(239, 167, 101);
+    font-size: 70px;
+}
+.hero-p{
+    color: rgb(233, 233, 233);
+}
+.caros-icon{
+    margin:0.625rem 0.625rem 0.625rem 1.875rem;
+    text-decoration:none;
+    color:white;
+    transition: all .5s;
+}
+.caros-icon:hover{
+    color: #EBA23A;
+}
+.reservation-btn{
+    background-color: transparent;
+    border: 1px solid rgb(239, 167, 101);
+    color: rgb(239, 167, 101);
+    transition: all .5s;
+}
+.reservation-btn:hover{
+    background-color: rgb(216, 150, 88);
+    color: rgb(224, 224, 224);
+}
+.first-section-captions p{
+    color: rgb(212, 212, 212);
+    font-size: larger;
+    margin: 1.875rem 0;
+
+}
+.first-section-captions h2{
+    color: rgb(239, 167, 101);
+ }
+.caption {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.first-section-captions a{
+    text-decoration:none;
+    color: inherit;
+    margin-right: 1.25rem;
+    transition: all 1s;
+    font-size: 15px;
+}
+
+
+.caption a:hover{
+    color: #EBA23A;
+    
+}
+
 .meal{
     height: 400px;
-    background-color: rgb(236, 212, 160);
+    background-color: orange;
     margin: 30px 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(216, 202, 202);
     position: relative;
     overflow: hidden;
 }
@@ -135,9 +173,23 @@ h1{
     transition: all 1s;
     cursor: pointer;
 }
-.img-meal:hover img{
+/* .img-meal:hover img{
     transform: scale(1.1);
+} */
+
+
+.meal-layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all 1s;
 }
+
+
 .img-meal:hover .meal-layer{
    opacity: 1;
 }
@@ -171,16 +223,6 @@ h1{
     width: 80%;
 }
 
-.meal-layer{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transition: all 1s;
-}
 
 .meal-layer button{
     background-color: #945f15;
@@ -196,27 +238,17 @@ h1{
 }
 
 
-
-.caption {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.caption a{
-    text-decoration:none;
-    color: inherit;
-    margin-right: 1.25rem;
-    transition: all 1s;
-}
-
-
-.caption a:hover{
-    color: #EBA23A;
-    
-}
-.caption p{
-  margin: 1.875rem 0;
-}
+.img-info{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+ }   
+ .img-info img{
+     width: 50%;
+     border-left: 15px solid rgb(239, 167, 101) ;
+     border-top: 15px solid rgb(239, 167, 101)   ;
+ 
+ }
 
 
 .fixed-bg{
@@ -228,7 +260,7 @@ h1{
     font-family:"fantasy";
 }
 .o{
-    color: #FEBE00;
+    color: #DF5F32;
     font-size: 3.75rem;
     font-family:serif;   
 }

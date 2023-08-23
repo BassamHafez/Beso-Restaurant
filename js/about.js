@@ -80,7 +80,6 @@ function display() {
    
         <div class=" col-sm-4 col-md-3">  
             <div class="meal">
-              <div class="price"><p>${getRandomPrice(50, 500)}$</p></div>
                 <div class="img-meal">
                   <div class="meal-layer d-flex flex-column justify-content-evenly align-items-center">
                     <div><button>Order Now</button></div>
