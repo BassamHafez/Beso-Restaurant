@@ -143,24 +143,31 @@ body{
 
 .meal{
     height: 400px;
-    background-color: orange;
+    background-color: rgb(6, 6, 12);
     margin: 30px 0;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 10px rgb(141, 113, 3);
 }
 .price{
-    background-color: rgb(24, 24, 24);
     color: #F2C010;
-    padding: 5px;
-    width: 50px;
-    height: 30px;
-    border-radius: 50%;
     position: absolute;
-    top: 2%;
+    top: 0;
     left: 0;
-    transform: rotate(-45deg);
-    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+}
+.price span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.price svg{
+    background-color: white;
+    border-radius: 50%;
 }
 .img-meal{
    height:50%;
@@ -173,10 +180,9 @@ body{
     transition: all 1s;
     cursor: pointer;
 }
-/* .img-meal:hover img{
+.img-meal:hover img{
     transform: scale(1.1);
-} */
-
+}
 
 .meal-layer{
     position: absolute;
@@ -187,11 +193,12 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: all 1s;
+    z-index: 1;
 }
-
 
 .img-meal:hover .meal-layer{
    opacity: 1;
+   transform: scale(1.1);
 }
 
 
