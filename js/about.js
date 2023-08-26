@@ -10,7 +10,11 @@ var currentMeal;
 var reveals = document.querySelectorAll(".reveal");
 var nav = document.querySelector(".navbar");
 var loadScreen = document.querySelector(".loading");
+var displayMeals=document.getElementById("displayMeals")
+var listedMeals=document.getElementById("listedMeals")
+var squareddMeals=document.getElementById("squareddMeals")
 
+//set loading
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     loadScreen.style.display = "flex";
@@ -21,9 +25,12 @@ document.onreadystatechange = function () {
   }
 };
 
+
+//return to home
 homeLink.addEventListener("click", function () {
   footer.classList.remove = "d-none";
   details.classList.remove("d-none");
+  displayMeals.classList.add("d-none");
   rows.classList.add("d-none");
   for (var i = 0; i < navLink.length; i++) {
     navLink[i].classList.remove("active");
@@ -37,6 +44,7 @@ for (var i = 0; i < navLink.length; i++) {
     footer.classList.add = "d-none";
     details.classList.add("d-none");
     rows.classList.remove("d-none");
+    displayMeals.classList.remove("d-none");
     this.classList.add("active");
     homeLink.classList.remove("active");
     getRecipes(currentMeal);
@@ -69,11 +77,25 @@ function getRandomPrice(min, max) {
   return Math.floor(randomNumber);
 }
 
-function display() {
+
+listedMeals.addEventListener('click',function(){
+  squareddMeals.classList.remove('active-list');
+  listedMeals.classList.add('active-list');
+  display(false)
+});
+squareddMeals.addEventListener('click',function(){
+  listedMeals.classList.remove('active-list');
+  squareddMeals.classList.add('active-list');
+  display(true)
+});
+
+
+function display(x) {
   var recipe = "";
   for (var i = 0; i < recipes.length; i++) {
-    recipe += `
-   
+  
+    recipe += 
+    x?`
         <div class=" col-sm-4 col-md-3"> 
             <div class="meal">
                 <div class="img-meal">
@@ -115,7 +137,8 @@ function display() {
               
             </div>
          </div>
-        `;
+        `: //not ture listed shape
+        ''
   }
 
   rows.innerHTML = recipe;

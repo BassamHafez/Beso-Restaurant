@@ -11,7 +11,6 @@ body{
     background-color: #111424;
 }
 
-
 .loading{
     position:fixed;
     top:0;
@@ -58,8 +57,6 @@ body{
     background-color: rgba(197, 175, 128, 0.664) !important;
   
 }
-
-
 
 
 .home{
@@ -141,6 +138,32 @@ body{
     
 }
 
+.listed-meals, .squared-shapes{
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 30px;
+    color: #2f344e;
+    transition: all 1s;
+}
+
+.search{
+    border:1px solid #2f344e;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2f344e;
+    transition: all 1s;
+    color: rgb(141, 113, 3);
+}
+.search:focus{
+   background-color: rgb(212, 212, 212);
+}
+.listed-meals:hover, .squared-shapes:hover{
+    color: rgb(141, 113, 3);
+}
+.active-list{
+    color: rgb(141, 113, 3);
+}
 .meal{
     height: 400px;
     background-color: rgb(6, 6, 12);
@@ -228,8 +251,13 @@ body{
     color: #945f15;
     font-weight: 600;
     width: 80%;
+    border: none;
+    transition: all .5s;
 }
-
+.recipe-buttons .btn:hover{
+    background-color: #945f15;
+    color: white;  
+}
 
 .meal-layer button{
     background-color: #945f15;
@@ -394,14 +422,22 @@ border-bottom:rgba(0, 0, 0, 0.2) 1px solid;
  color: #EBA23A;
 }
 /* /Reveal scrolling */
-.reveal-special{
-transform:scale(.1);
-opacity: 0;
-transition: all 2s ease-in-out;
-}
+
 .reveal-meals {
     position: relative;
     transform:translate(10%,10%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.reveal-special {
+    position: relative;
+    transform:translate(30%,30%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.reveal-special-two {
+    position: relative;
+    transform:translate(-30%,30%);
     opacity: 0;
     transition: all 1s ease-in-out;
 }
@@ -422,7 +458,6 @@ opacity:1 !important;
 .last-meals{
     border-radius: 50%;
 }
-
 
 @media screen and (max-width:800px) {
         body,html{
