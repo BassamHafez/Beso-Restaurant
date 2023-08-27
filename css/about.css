@@ -5,12 +5,18 @@
     box-sizing: border-box;
     font-family: 'Yeseva One', cursive;
 }
-body{
+body,html{
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: #111424;
+    background-color: #0E0D0C;
 }
-
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.title-id{
+    color: rgb(239, 167, 101);
+}
 .loading{
     position:fixed;
     top:0;
@@ -39,15 +45,8 @@ body{
     color: #cccccc;
   }
   
-  /* .date-input::-webkit-calendar-picker-indicator {
-    
-
-} */
-.pink{
-    color: rgb(223, 25, 58);
-}
 .navbrand-img{
-    width:14.375rem;
+    width:12.5rem;
 }
 .navbar{
     background-color:transparent!important;
@@ -64,7 +63,17 @@ body{
     color: rgb(239, 167, 101)!important;
     cursor:pointer;
 }
-
+.navbar-nav{
+    margin-top: 10px;
+}
+.nav-cart {
+    color: rgb(239, 167, 101);
+    cursor: pointer;
+    transition: all 1s;
+}
+.nav-cart .fa-2x:hover{
+    transform: scale(1.2);
+}
 .active{
     color: rgb(239, 167, 101) !important;
 }
@@ -73,7 +82,46 @@ body{
     background-color: rgba(197, 175, 128, 0.664) !important;
   
 }
+.drop-meals{
+    position: relative;
+}
+.dropdown-meals{
+    background-color: rgb(239, 167, 101);
+    padding:10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 22222;
+    text-align: center;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 10px;
+    font-weight: 700;
+    display: none;
+}
+.drop-meals:hover .dropdown-meals{
+    display:flex;
+}
 
+.food{
+    transition: all 1s;
+    border-radius: 10px;
+}
+.food:hover{
+    background-color: #995f12;
+    cursor: pointer;
+    color: black;
+}
+
+.hero{
+    position: relative;
+}
+.svg-grass{
+    position: absolute;
+    bottom: -400px;
+    right: 0;
+}
 
 .home{
     height: 100vh;
@@ -84,7 +132,7 @@ body{
 }
 
 .hero-layer{
-    background:linear-gradient(to bottom,#111424a9,#111424) ;
+    background:linear-gradient(to bottom,#0E0D0C,#0e0d0cab,#0E0D0C) ;
     position: absolute;
     top: 0;
     right: 0;
@@ -114,7 +162,7 @@ body{
     transition: all .5s;
 }
 .caros-icon:hover{
-    color: #EBA23A;
+    color: rgb(239, 167, 101);
 }
 .reservation-btn{
     background-color: transparent;
@@ -172,7 +220,7 @@ body{
     color: #EFA765;
 }
 .search:focus{
-   background-color: rgb(212, 212, 212);
+   background-color: rgb(41, 41, 41);
 }
 .listed-meals:hover, .squared-shapes:hover{
     color: #EFA765;
@@ -205,7 +253,7 @@ body{
 }
 .listed-meals-btn .btn{
     background-color: transparent;
-    color: #EFA765;
+    color: white;
     font-weight: 600;
     border: 0.0625rem solid #2f344e;
     transition: all .5s;
@@ -214,8 +262,8 @@ body{
     
 }
 .listed-meals-btn .btn:hover{
-    background-color: #EFA765;
-    color: white;  
+    background-color: #2f344e;
+    color: #EBA23A;  
 }
 .dots {
     flex-grow: 3;
@@ -310,7 +358,7 @@ body{
     text-overflow: ellipsis;
     cursor: pointer;
     margin-bottom: 1.875rem;
-    margin-left: 2.5rem;
+    margin-left: 44px;
     max-width: 12.5rem;
     transition: all .5s;
 }
@@ -389,11 +437,93 @@ body{
     font-family:cursive; 
 }
 
+.separator{
+    width: 100px;
+}
+.bg-danger{
+    padding: 0;
+}
+.why-div{
+    background-color: black;
+    width: 100%;
+}
+.why-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px 20px;
+
+    transition: all 1s;
+}
+.why-div:hover .why-img{
+    animation-name: whyImgTransition;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+@keyframes whyImgTransition {
+    /* 0%{transform: scale(.1);} */
+    0%{transform: scale(1);}
+    25%{transform: scale(.1);}
+    50%{transform: rotateY(180deg);}
+    100%{transform: scale(1);}
+
+    /* 100%{transform: scale(1);} */
+}
+.why-caption{
+    text-align: center;
+    width: 100%;
+    padding:15px 20px;
+    color: #cccccc;
+}
+.why-caption p{
+    color: rgba(255, 255, 255, 0.363);
+}
+
+.team-img{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+.team-caption{
+    color: #cccccc;
+}
+.team-img-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #eba13a9a;
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: all 1s;
+}
+.team-img:hover .team-img-layer{
+    opacity: 1;
+    transform: translateX(0);
+}
+.team-img-layer i{
+    color: #2f344e;
+}
+.team-img-layer .fa-linkedin:hover{
+    color: #0a35cf;
+    cursor: pointer;
+}
 footer{
     background-color: #353330;
     color: rgba(255, 255, 255, .4);
     font-family: serif;
+    position: relative;
+    width: 100%;
 }
+.svg-tomatos{
+    position: absolute;
+    top:-410px;
+    left: 0;
+    z-index: -1;
+}
+
 footer h4{
     color: #EBA23A;
 }
@@ -421,25 +551,30 @@ padding: 0 1.25rem;
     
 }
 
-.fa-facebook,.fa-twitter,.fa-youtube,.fa-tiktok,.fa-instagram{
+footer .fa-facebook, footer .fa-twitter,.fa-youtube,.fa-tiktok,.fa-instagram{
 color: burlywood;
 transition: all .5s;
 }
 
 .fa-facebook:hover{
 color:#4867AA;
+cursor: pointer;
 }
 .fa-twitter:hover{
 color: #1D9BF0;
+cursor: pointer;
 }
 .fa-youtube:hover{
 color: red;
+cursor: pointer;
 }
 .fa-tiktok:hover{
 color: black;
+cursor: pointer;
 }
 .fa-instagram:hover{
 color: orangered;
+cursor: pointer;
 }
 .footer-details{
 border-bottom:rgba(0, 0, 0, 0.2) 1px solid;
@@ -449,7 +584,7 @@ border-bottom:rgba(0, 0, 0, 0.2) 1px solid;
     transition: all .5;
 }
 .footer-detail a:hover {
-    color: #EBA23A !important;
+    color:rgb(216, 150, 88) !important;
     cursor:pointer;
 }
 .footer-details p:hover {
@@ -467,38 +602,53 @@ border-bottom:rgba(0, 0, 0, 0.2) 1px solid;
     position:fixed;
     bottom:0.3125rem;
     right:0.3125rem;
-    color: chocolate;
+    color: rgb(216, 150, 88);
+    transition: all .5s;
 }
 .arrow-up:hover{
- color: #EBA23A;   
+    transform: translateY(-20px);
+    color: rgb(216, 150, 88);
+}
+.modal-header{
+    color:rgb(239, 167, 101);
 }
 
-.modal-header{
-    color:#EBA23A;
-    font-family: sans-serif;
-}
-.modal-footer button{
-    color: black;
-}
 .modal-body,.modal-footer,.modal-header{
-    background:linear-gradient(to right,rgba(255, 192, 203, 0.6),#8CB4C7) 
+    background-color: #0E0D0C;
 }
 .modal-body img{
-    border-right: solid 0.0625rem pink;
-    border-left:solid 0.0625rem #8CB4C7;
-    border-top:solid 0.0625rem pink;
-    border-bottom:solid 0.0625rem #8CB4C7;
+    border: 1px solid rgb(239, 167, 101);
     border-radius: 1.25rem;
 }
+.modal-body{
+    color: #cccccc;
+}
 .card-body{
-    background-color:#c3d1d8;
+    background-color:rgb(239, 167, 101);
 }
 #ingredients{
     list-style: none;
     text-align: left;
+    color: rgb(41, 40, 40);
 }
 .fa-utensils{
- color: #EBA23A;
+ color: black;
+}
+
+
+.modal-btns{
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border: 0.0625rem solid #2f344e;
+    transition: all .5s;
+    padding: 10px 20px;
+    margin-inline: 10px;
+}
+.modal-btns{
+    background-color:#2f344e ;
+    color: rgb(216, 150, 88);
+    border: 0.0625rem solid rgb(216, 150, 88) ;
 }
 /* /Reveal scrolling */
 
@@ -519,10 +669,14 @@ border-bottom:rgba(0, 0, 0, 0.2) 1px solid;
     transform:translate(-30%,30%);
     opacity: 0;
     transition: all 1s ease-in-out;
+
+}
+.special-bg-color{
+    background-color: #181818;
     height: 500px;
     width: 100%;
-    background-color: #181818;
     padding: 10px;
+
 }
 .show-meals{
     transform:translate(0,0) !important;
@@ -569,6 +723,7 @@ option{
     border-radius: 10px;
     color: #cccccc;
 }
+
 
 @media screen and (max-width:800px) {
         body,html{

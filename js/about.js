@@ -2,6 +2,7 @@ var recipes = [];
 var detailsArray = [];
 var rows = document.getElementById("rows");
 var navLink = document.querySelectorAll(".food");
+var links = document.querySelectorAll(".links");
 var homeLink = document.getElementById("home");
 var footer = document.getElementById("footer");
 var details = document.getElementById("details");
@@ -13,6 +14,7 @@ var loadScreen = document.querySelector(".loading");
 var displayMeals=document.getElementById("displayMeals")
 var listedMeals=document.getElementById("listedMeals")
 var squareddMeals=document.getElementById("squareddMeals")
+var menu=document.getElementById("menu")
 
 //set loading
 document.onreadystatechange = function () {
@@ -28,26 +30,33 @@ document.onreadystatechange = function () {
 
 //return to home
 homeLink.addEventListener("click", function () {
-  footer.classList.remove = "d-none";
   details.classList.remove("d-none");
   displayMeals.classList.add("d-none");
   rows.classList.add("d-none");
-  for (var i = 0; i < navLink.length; i++) {
-    navLink[i].classList.remove("active");
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
   }
   this.classList.add("active");
 });
 
-for (var i = 0; i < navLink.length; i++) {
+for (let i = 0; i < navLink.length; i++) {
   navLink[i].addEventListener("click", function (e) {
     currentMeal = e.target.text;
-    footer.classList.add = "d-none";
     details.classList.add("d-none");
     rows.classList.remove("d-none");
     displayMeals.classList.remove("d-none");
-    this.classList.add("active");
+    menu.classList.add("active");
     homeLink.classList.remove("active");
     getRecipes(currentMeal);
+  });
+}
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function (e) {
+    for (let j = 0; j < links.length; j++) {
+      links[j].classList.remove("active");
+    }
+    homeLink.classList.remove("active");
+    this.classList.add("active")
   });
 }
 
@@ -92,7 +101,7 @@ squareddMeals.addEventListener('click',function(){
 
 function display(x) {
   var recipe = "";
-  for (var i = 0; i < recipes.length; i++) {
+  for (let i = 0; i < recipes.length; i++) {
   
     recipe += 
     x?`
@@ -186,7 +195,7 @@ function displayDetails() {
     <h1>${detailsArray.title}</h1>
     <div class="m-auto"><img src="${detailsArray.image_url}" class="m-auto"></img></div>
     <p>${detailsArray.publisher}</p>
-    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <button class="btn modal-btns" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Show ingredients <i class="fa-solid fa-angles-down"></i>
     </button>
     <div class="collapse" id="collapseExample">
