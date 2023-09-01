@@ -1,7 +1,6 @@
 var recipes = [];
-var detailsArray = [];
 var rows = document.getElementById("rows");
-var navLink = document.querySelectorAll(".food");
+var meals = document.querySelectorAll(".food");
 var links = document.querySelectorAll(".links");
 var homeLink = document.getElementById("home");
 var footer = document.getElementById("footer");
@@ -11,10 +10,11 @@ var currentMeal;
 var reveals = document.querySelectorAll(".reveal");
 var nav = document.querySelector(".navbar");
 var loadScreen = document.querySelector(".loading");
-var displayMeals=document.getElementById("displayMeals")
-var listedMeals=document.getElementById("listedMeals")
-var squareddMeals=document.getElementById("squareddMeals")
-var menu=document.getElementById("menu")
+var displayMeals = document.getElementById("displayMeals");
+var listedMeals = document.getElementById("listedMeals");
+var squareddMeals = document.getElementById("squareddMeals");
+var menu = document.getElementById("menu");
+var searchValue= document.getElementById("search")
 
 //set loading
 document.onreadystatechange = function () {
@@ -27,7 +27,6 @@ document.onreadystatechange = function () {
   }
 };
 
-
 //return to home
 homeLink.addEventListener("click", function () {
   details.classList.remove("d-none");
@@ -39,9 +38,10 @@ homeLink.addEventListener("click", function () {
   this.classList.add("active");
 });
 
-for (let i = 0; i < navLink.length; i++) {
-  navLink[i].addEventListener("click", function (e) {
-    currentMeal = e.target.text;
+for (let i = 0; i < meals.length; i++) {
+  meals[i].addEventListener("click", function () {
+    window.scrollTo(0,0);
+    currentMeal = meals[i].dataset.name;
     details.classList.add("d-none");
     rows.classList.remove("d-none");
     displayMeals.classList.remove("d-none");
@@ -52,21 +52,36 @@ for (let i = 0; i < navLink.length; i++) {
 }
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", function (e) {
+    details.classList.remove("d-none");
+    displayMeals.classList.add("d-none");
     for (let j = 0; j < links.length; j++) {
       links[j].classList.remove("active");
     }
     homeLink.classList.remove("active");
-    this.classList.add("active")
+    this.classList.add("active");
   });
 }
+
+  searchValue.addEventListener("change",function(e){
+    var mealVal = e.target.value;
+    getRecipes(mealVal);
+  });
+
 
 async function getRecipes(type) {
   loadScreen.style.display = "flex";
   document.getElementById("body").style.cssText = "overflow-y:hidden";
-  var response = await fetch(
-    `https://forkify-api.herokuapp.com/api/search?q=${type}`
-  );
-  recipes = (await response.json()).recipes;
+  try{
+    var response = await fetch(
+      `https://forkify-api.herokuapp.com/api/search?q=${type}`
+    );
+    if(!response.ok){
+      throw new Error('sorry but we dont have this meal yet');
+    }
+    recipes = (await response.json()).recipes;
+  }
+  catch(error) {alert(error)};
+
   display();
   // var httpRequest = new XMLHttpRequest();
   // httpRequest.open("GET", `https://forkify-api.herokuapp.com/api/search?q=${type}`);
@@ -87,25 +102,29 @@ function getRandomPrice(min, max) {
 }
 
 
-listedMeals.addEventListener('click',function(){
-  squareddMeals.classList.remove('active-list');
-  listedMeals.classList.add('active-list');
-  display(false)
+listedMeals.addEventListener("click", function () {
+  squareddMeals.classList.remove("active-list");
+  listedMeals.classList.add("active-list");
+  display(false);
 });
-squareddMeals.addEventListener('click',function(){
-  listedMeals.classList.remove('active-list');
-  squareddMeals.classList.add('active-list');
-  display(true)
+squareddMeals.addEventListener("click", function () {
+  listedMeals.classList.remove("active-list");
+  squareddMeals.classList.add("active-list");
+  display(true);
 });
 
+window.addEventListener('resize', function(){
+  if(window.innerWidth<450){
+    display(true);
+  }
+})
 
 function display(x) {
   var recipe = "";
   for (let i = 0; i < recipes.length; i++) {
-  
-    recipe += 
-    x?`
-        <div class=" col-sm-4 col-md-3"> 
+    recipe += x
+      ? `
+        <div class=" col-sm-6 col-md-3"> 
             <div class="meal">
                 <div class="img-meal">
 
@@ -127,7 +146,7 @@ function display(x) {
                          <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
                   </div>
-                  <img src="${
+                  <img onload="loadingImage(this)" src="${
                     recipes[i].image_url
                   }" class="w-100 meal-img" alt="meal">
                  
@@ -146,11 +165,16 @@ function display(x) {
               
             </div>
          </div>
-        `: //not ture listed shape
-        `<div class="col-md-6 listed-shape-style mb-5">
+        ` 
+        
+        
+        //not ture listed shape--------------------------------------------------------
+
+
+      : `<div class="col-lg-6 listed-shape-style mb-5">
             <div class="d-flex align-items-center listed-shape-style-content">
                 <div class="listed-img-meal-container">
-                  <img src="${
+                  <img onload="loadingImage(this)" src="${
                     recipes[i].image_url
                   }" class=" listed-img-meal" alt="meal">
                 </div>
@@ -173,7 +197,7 @@ function display(x) {
                 })" class="btn my-1 " data-bs-toggle="modal" data-bs-target="#exampleModal">View</a>
               </div>  
             </div>        
-        </div>`
+        </div>`;
   }
 
   rows.innerHTML = recipe;
@@ -181,61 +205,88 @@ function display(x) {
   document.getElementById("body").style.cssText = "overflow-y:auto";
 }
 
+function loadingImage(img){
+
+  loadScreen.style.display = "flex";
+  document.getElementById("body").style.cssText = "overflow-y:hidden";
+
+  if(img.complete){
+    loadScreen.style.display = "none";
+    document.getElementById("body").style.cssText = "overflow-y:auto";
+  }
+  else{
+    loadingImage();
+  }
+}
+
 async function getDetails(Id) {
   var response = await fetch(
     `https://forkify-api.herokuapp.com/api/get?rId=${Id}`
   );
-  detailsArray = (await response.json()).recipe;
-  displayDetails();
+  let singleMeal = (await response.json()).recipe;
+  displayDetails(singleMeal);
 }
 
-function displayDetails() {
-  var detailsCartoona = "";
+function displayDetails(singleMeal) {
+  var detailsCartoona='';
   detailsCartoona += `
-    <h1>${detailsArray.title}</h1>
-    <div class="m-auto"><img src="${detailsArray.image_url}" class="m-auto"></img></div>
-    <p>${detailsArray.publisher}</p>
-    <button class="btn modal-btns" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Show ingredients <i class="fa-solid fa-angles-down"></i>
-    </button>
-    <div class="collapse" id="collapseExample">
-    <div class="card card-body mt-2">
-    <ul id='ingredients'></ul>
-    </div>
-    </div>
-    `;
+  <h1>${singleMeal.title}</h1>
+  <div class="m-auto"><img src="${singleMeal.image_url}" class="m-auto"></img></div>
+  <p>${singleMeal.publisher}</p>
+  <button class="btn modal-btns" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Show ingredients <i class="fa-solid fa-angles-down"></i>
+  </button>
+  <div class="collapse" id="collapseExample">
+  <div class="card card-body mt-2">
+  <ul id='ingredients'></ul>
+  </div>
+  </div>    `    
+ 
   viewDetails.innerHTML = detailsCartoona;
-  seperateIngredients();
+  seperateIngredients(singleMeal);
 }
 
-function seperateIngredients() {
+function seperateIngredients(singleMeal) {
   cartoona = "";
-  for (i = 0; i < detailsArray.ingredients.length; i++) {
-    cartoona += `<li><i class="fa-solid fa-utensils"></i> ${detailsArray.ingredients[i]}</li>`;
+  for (i = 0; i < singleMeal.ingredients.length; i++) {
+    cartoona += `<li><i class="fa-solid fa-utensils"></i> ${singleMeal.ingredients[i]}</li>`;
   }
   document.getElementById("ingredients").innerHTML = cartoona;
 }
 
-let windoHeight = window.innerHeight;
-const revealPoint = 150;
+// let windoHeight = window.innerHeight;
+// const revealPoint = 150;
+// function getReveal() {
+//   for (let i = 0; i < reveals.length; i++) {
+//     let distanceTop = reveals[i].getBoundingClientRect().top;
+//     if (distanceTop < windoHeight - revealPoint) {
+//       reveals[i].classList.add("showing");
+//       if (reveals[i].classList.contains("reveal-meals")) {
+//         reveals[i].classList.add("show-meals");
+//       }
+//     } else {
+//       reveals[i].classList.remove("showing");
+//       if (reveals[i].classList.contains("reveal-meals")) {
+//         reveals[i].classList.remove("show-meals");
+//       }
+//     }
+//   }
+// }
 
 function getReveal() {
-  for (let i = 0; i < reveals.length; i++) {
-    let distanceTop = reveals[i].getBoundingClientRect().top;
-    if (distanceTop < windoHeight - revealPoint) {
-      reveals[i].classList.add("showing");
-      if (reveals[i].classList.contains("reveal-meals")) {
-        reveals[i].classList.add("show-meals");
-      }
-    } else {
-      reveals[i].classList.remove("showing");
-      if (reveals[i].classList.contains("reveal-meals")) {
-        reveals[i].classList.remove("show-meals");
+    for (let i = 0; i < reveals.length; i++) {
+      if (window.scrollY >= reveals[i].offsetTop - 500) {
+
+        reveals[i].classList.add("showing");
+
+      } else {
+        reveals[i].classList.remove("showing");
       }
     }
-  }
 }
-window.addEventListener("scroll", getReveal);
+
+  window.addEventListener("scroll", getReveal);
+
 
 function getNavScroll() {
   var scrolled = window.scrollY;
