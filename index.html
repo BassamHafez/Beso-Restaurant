@@ -1,522 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Beso Restaurant</title>
-    <meta name="keywords"
-        content="Beso Restaurant,Beso,restaurant,pizza,humburger,ice cream,beef,donuts,dishes,5 stars">
-    <meta name="description"
-        content="We are the best restaurant in the city with 5 stars ,best chefs,best place,best dishes">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/all.min.css">
-</head>
+    <meta
+      name="keywords"
+      content="Beso Restaurant,Beso,restaurant,pizza,humburger,ice cream,beef,donuts,dishes,5 stars"
+    />
+    <meta
+      name="description"
+      content="We are the best restaurant in the city with 5 stars ,best chefs,best place,best dishes"
+    />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
 
-
-
-
-<body id="body">
-
-
-
-    <div class=" loading">
-        <video src="videos/loading.mp4" loop muted autoplay class="loading-video"></video>
+  <body id="body">
+    <div class="loading">
+      <video
+        src="videos/loading.mp4"
+        loop
+        muted
+        autoplay
+        class="loading-video"
+      ></video>
     </div>
-
 
     <div class="hero">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/logo.png" class="navbrand-img" alt="navbrand"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0 px-2">
-                        <li class="nav-item">
-                            <a class="nav-link links active " id="home" href="#Home" aria-current="page">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link links" href="#About" aria-current="page">About</a>
-                        </li>
-                            <li class="nav-item special-menu">
-                                <a class="nav-link links" id="menu" href="#Menu" aria-current="page">Menu</a>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link links" href="#Book" aria-current="page">Book</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link links"  href="#Choose" aria-current="page">Choose</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link links"  href="#Chefs" aria-current="page">Chefs</a>
-                        </li>
-                    </ul>
-                    <div class="nav-cart d-flex justify-content-center align-items-center ms-auto me-4">
-                        <i class="fa-regular fa-heart fa-2x mx-4"></i>
-                        <i class="fa-brands fa-opencart fa-2x mx-4"></i>
-                    </div>
-                </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="images/logo.png" class="navbrand-img" alt="navbrand"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 px-2">
+              <li class="nav-item">
+                <a
+                  class="nav-link links active"
+                  id="home"
+                  href="#Home"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link links" href="#About" aria-current="page"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item special-menu">
+                <a
+                  class="nav-link links"
+                  id="menu"
+                  href="#Menu"
+                  aria-current="page"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link links" href="#Book" aria-current="page"
+                  >Book</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link links" href="#Choose" aria-current="page"
+                  >Choose</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link links" href="#Chefs" aria-current="page"
+                  >Chefs</a
+                >
+              </li>
+            </ul>
+            <div
+              class="nav-cart d-flex justify-content-center align-items-center ms-auto me-4"
+            >
+              <i class="fa-regular fa-heart fa-2x mx-4"></i>
+              <i class="fa-brands fa-opencart fa-2x mx-4"></i>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
 
-        <div class="home" id="Home">
-            <div class="hero-layer"></div>
-            <div class="hero-caption">
-                <h1 class="hero-title"> A Premium and Authentic Beso Restaurant</h1>
-                <div class="d-flex hero-p">
-                    <p><a class="caros-icon"><i class="fa-solid fa-clock"></i></a>10 am - 12 pm </p>
-                    <p><a class="caros-icon"><i class="fa-solid fa-phone"></i></a>+46 123 456 789</p>
-                </div>
-                <div class="d-flex ms-3 mt-3">
-                    <button class="btn btn-outline-secondary mx-1 ">View menu</button>
-                    <a href ="#Book" class="btn reservation-btn mx-1 ">Make A Reservation</a>
-                </div>
-            </div>
+      <div class="home" id="Home">
+        <div class="hero-layer"></div>
+        <div class="hero-caption">
+          <h1 class="hero-title">A Premium and Authentic Beso Restaurant</h1>
+          <div class="d-flex hero-p">
+            <p>
+              <a class="caros-icon"><i class="fa-solid fa-clock"></i></a>10 am -
+              12 pm
+            </p>
+            <p>
+              <a class="caros-icon"><i class="fa-solid fa-phone"></i></a>+46 123
+              456 789
+            </p>
+          </div>
+          <div class="d-flex ms-3 mt-3">
+            <button class="btn btn-outline-secondary mx-1">View menu</button>
+            <a href="#Book" class="btn reservation-btn mx-1"
+              >Make A Reservation</a
+            >
+          </div>
         </div>
-        <div class="svg-grass">
-            <img src="images/bg-2.png" class="w-100" alt="">
-        </div>
+      </div>
+      <div class="svg-grass">
+        <img src="images/bg-2.png" class="w-100" alt="" />
+      </div>
     </div>
 
+    <section class="mt-3 reveal reveal-meals d-none" id="displayMeals">
+      <div
+        class="display-meals d-flex justify-content-evenly align-items-center w-25 ms-auto mb-5"
+      >
+        <input
+          type="search"
+          class="search"
+          placeholder="search meal"
+          id="search"
+        />
+        <button id="listedMeals" class="active-list listed-meals">
+          <i class="fa-solid fa-list-ul"></i>
+        </button>
+        <button id="squareddMeals" class="squared-shapes">
+          <i class="fa-solid fa-rectangle-list"></i>
+        </button>
+      </div>
 
-    <section class=" mt-3 reveal reveal-meals d-none " id="displayMeals">
-
-        <div 
-            class="  display-meals d-flex justify-content-evenly align-items-center w-25 ms-auto mb-5">
-            <input  type="search" class="search" placeholder="search meal" id="search"/>
-            <button id="listedMeals" class="active-list listed-meals"><i class="fa-solid fa-list-ul"></i></button>
-            <button id="squareddMeals" class="squared-shapes"><i class="fa-solid fa-rectangle-list"></i></button>
+      <div class="container-fluid">
+        <div class="row mb-4" id="rows">
+          <!-- innerHtml -->
         </div>
-
-        <div class="container-fluid">
-
-            <div class="row mb-4 " id="rows">
-
-                <!-- innerHtml -->
-            </div>
-        </div>
+      </div>
     </section>
 
-
     <div id="details">
-        <div class="cartona "  id="About">
-        
-            <div class="row sec-one justify-content-evenly" >
+      <div class="cartona" id="About">
+        <div class="row sec-one justify-content-evenly">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column mb-5"
+          >
+            <h4 class="title-id">About Us</h4>
+            <img src="images/separator.svg" class="separator" alt="" />
+          </div>
 
-                <div class="d-flex justify-content-center align-items-center flex-column mb-5">
-                    <h4 class="title-id">About Us</h4>
-                    <img src="images/separator.svg" class="separator" alt="">    
-                </div>
+          <div class="col-md-6 img-info reveal reveal-special-two">
+            <img src="images/footer-img.jpg" alt="restaurant" />
+          </div>
 
-                <div class="col-md-6 img-info  reveal reveal-special-two">
-                    <img src="images/footer-img.jpg" alt="restaurant">
-                </div>
+          <div class="col-md-6 caption reveal reveal-special">
+            <div class="first-section-captions">
+              <h2>
+                <span class="o">o</span>ur products are carefully selected
+              </h2>
 
-                <div class="col-md-6 caption   reveal reveal-special">
-                    <div class="first-section-captions">
-                        <h2><span class="o">o</span>ur products are carefully selected</h2>
-
-                        <p>Beso Restaurant- our products are 100% natural and healthy, and this is the result of our
-                            keenness to choose the best, most mature and highest quality ingredients from our own farms.
-                        </p>
-                        <p class="listed-sec-one-p"><a href="#"><i class="fa-solid fa-seedling fa-2x"></i></a> We care about environment.</p>
-                        <p class="listed-sec-one-p"><a href="#"><i class="fa-solid fa-users fa-2x"></i></a>We are trusted by hundreds of clients.
-                        </p>
-                        <p class="listed-sec-one-p"><a href="#"><i class="fa-solid fa-heart fa-2x"></i></a>Millions of people loves us</p>
-                        <p class="listed-sec-one-p"><a href="#"><i class="fa-solid fa-truck-fast fa-2x"></i></a>Fastest service and best
-                            performance</p>
-                    </div>
-                </div>
+              <p>
+                Beso Restaurant- our products are 100% natural and healthy, and
+                this is the result of our keenness to choose the best, most
+                mature and highest quality ingredients from our own farms.
+              </p>
+              <p class="listed-sec-one-p">
+                <a href="#"><i class="fa-solid fa-seedling fa-2x"></i></a> We
+                care about environment.
+              </p>
+              <p class="listed-sec-one-p">
+                <a href="#"><i class="fa-solid fa-users fa-2x"></i></a>We are
+                trusted by hundreds of clients.
+              </p>
+              <p class="listed-sec-one-p">
+                <a href="#"><i class="fa-solid fa-heart fa-2x"></i></a>Millions
+                of people loves us
+              </p>
+              <p class="listed-sec-one-p">
+                <a href="#"><i class="fa-solid fa-truck-fast fa-2x"></i></a
+                >Fastest service and best performance
+              </p>
             </div>
-        </div>        
+          </div>
+        </div>
+      </div>
 
-        <div class="cartona mb-5" id="Menu">
+      <div class="cartona mb-5" id="Menu">
+        <div class="row justify-content-evenly">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column mb-5"
+          >
+            <h4 class="title-id">Check Our Menu</h4>
+            <img src="images/separator.svg" class="separator" alt="" />
+          </div>
 
-            <div class="row justify-content-evenly">
-
-                <div class="d-flex justify-content-center align-items-center flex-column mb-5">
-                    <h4 class="title-id">Check Our Menu</h4>
-                    <img  src="images/separator.svg" class="separator" alt="">    
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="seafood">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-shrimp fa-3x"></i>
                 </div>
-
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food" data-name="seafood">   
-                        <div class="menu-type">
-                        <div class="mb-2">
-                            <i class="fa-solid fa-shrimp fa-3x"></i>
-                        </div>
-                        <div>
-                            <h4 class="food">seafood</h4>
-                        </div>
-                    </div></a>
-                 
+                <div>
+                  <h4 class="food">seafood</h4>
                 </div>
+              </div></a
+            >
+          </div>
 
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food" data-name="pizza">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-pizza-slice fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>pizza</h4>
-                            </div>
-                        </div>
-                    </a>
-              
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="pizza">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-pizza-slice fa-3x"></i>
                 </div>
-
-
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food" data-name="pasta">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-plate-wheat  fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>pasta</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                  
+                <div>
+                  <h4>pizza</h4>
                 </div>
+              </div>
+            </a>
+          </div>
 
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food" data-name="chicken">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-drumstick-bite fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>chicken</h4>
-                            </div>
-                        </div>
-                    </a>
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="pasta">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-plate-wheat fa-3x"></i>
                 </div>
-
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food" data-name="lamb">
-
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-bacon fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>lamb</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                 
+                <div>
+                  <h4>pasta</h4>
                 </div>
+              </div>
+            </a>
+          </div>
 
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food"  data-name="sushi">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-fish fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>sushi</h4>
-                            </div>
-                        </div>
-                    </a>
-
-                
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="chicken">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-drumstick-bite fa-3x"></i>
                 </div>
-
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food"  data-name="sausage">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-hotdog fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>sausage</h4>
-                            </div>
-                        </div>
-                    </a>
-
-            
+                <div>
+                  <h4>chicken</h4>
                 </div>
+              </div>
+            </a>
+          </div>
 
-                <div class=" d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu">
-                    <a class="food"  data-name="beef">
-                        <div class="menu-type">
-                            <div class="mb-2">
-                                <i class="fa-solid fa-burger fa-3x"></i>
-                            </div>
-                            <div>
-                                <h4>beef</h4>
-                            </div>
-                        </div>
-                    </a>
-
-          
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="lamb">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-bacon fa-3x"></i>
                 </div>
+                <div>
+                  <h4>lamb</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="sushi">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-fish fa-3x"></i>
+                </div>
+                <div>
+                  <h4>sushi</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="sausage">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-hotdog fa-3x"></i>
+                </div>
+                <div>
+                  <h4>sausage</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="d-flex justify-content-center align-items-center col-sm-6 col-md-3 mb-5 reveal reveal-special-menu"
+          >
+            <a class="food" data-name="beef">
+              <div class="menu-type">
+                <div class="mb-2">
+                  <i class="fa-solid fa-burger fa-3x"></i>
+                </div>
+                <div>
+                  <h4>beef</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartona w-100" id="Book">
+        <div class="row special-bg-color">
+          <div class="col-md-6 book-table-img reveal reveal-special-two"></div>
+          <div class="col-md-6 text-center reveal reveal-special-two">
+            <div
+              class="d-flex justify-content-center align-items-center flex-column mb-5"
+            >
+              <h4 class="title-id">BOOK A TABLE</h4>
+              <h6 class="book-table-h5">~ Check out our place ~</h6>
+              <img src="images/separator.svg" class="separator" alt="" />
             </div>
-        </div>
-        
-
-        <div class="cartona  w-100" id="Book">
-            <div class="row  special-bg-color ">
-                <div class=" col-md-6 book-table-img reveal reveal-special-two"></div>
-                <div class="col-md-6 text-center reveal reveal-special-two">
-                    <div class="d-flex justify-content-center align-items-center flex-column mb-5">
-                        <h4 class="title-id">BOOK A TABLE</h4>
-                        <h6 class="book-table-h5">~ Check out our place ~</h6>
-                        <img src="images/separator.svg" class="separator" alt="">    
-                    </div>
-                    <div class="container-fluid mt-5">
-                        <div class="row">
-                            <div class="custom-select col-md-6 mb-5">
-                                <select>
-                                    <option value="1">1 People</option>
-                                    <option value="2">2 People</option>
-                                    <option value="3">3 People</option>
-                                    <option value="4">4 People</option>
-                                    <option value="5">5 People</option>
-                                    <option value="6">6 People</option>
-                                    <option value="7">7 People</option>
-                                    <option value="8">8 People</option>
-                                    <option value="9">9 People</option>
-                                    <option value="10">10 People</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <input class="date-input input" placeholder="Date" type="date">
-                            </div>
-                            <div class="custom-select col-md-6 mb-5">
-                                <select>
-                                    <option value="10.00">10.00 am</option>
-                                    <option value="10.30 am">10.30 am</option>
-                                    <option value="11.00 am">11.00 am</option>
-                                    <option value="11.30 am">11.30 am</option>
-                                    <option value="12.00 pm">12.00 pm</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <input class="name-input input" placeholder="Name" type="name">
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <input class="phone-input input" placeholder="Phone" type="phone">
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <input class="email-input input" placeholder="Email" type="email">
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="container-fluid mt-5">
+              <div class="row">
+                <div class="custom-select col-md-6 mb-5">
+                  <select>
+                    <option value="1">1 People</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7">7 People</option>
+                    <option value="8">8 People</option>
+                    <option value="9">9 People</option>
+                    <option value="10">10 People</option>
+                  </select>
                 </div>
+                <div class="col-md-6 mb-5">
+                  <input
+                    class="date-input input"
+                    placeholder="Date"
+                    type="date"
+                  />
+                </div>
+                <div class="custom-select col-md-6 mb-5">
+                  <select>
+                    <option value="10.00">10.00 am</option>
+                    <option value="10.30 am">10.30 am</option>
+                    <option value="11.00 am">11.00 am</option>
+                    <option value="11.30 am">11.30 am</option>
+                    <option value="12.00 pm">12.00 pm</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-5">
+                  <input
+                    class="name-input input"
+                    placeholder="Name"
+                    type="name"
+                  />
+                </div>
+                <div class="col-md-6 mb-5">
+                  <input
+                    class="phone-input input"
+                    placeholder="Phone"
+                    type="phone"
+                  />
+                </div>
+                <div class="col-md-6 mb-5">
+                  <input
+                    class="email-input input"
+                    placeholder="Email"
+                    type="email"
+                  />
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="fixed-bg d-flex justify-content-center align-items-center">
-            <h2>A VARIETY OF GREAT DISHES</h2>
-        </div>
+      <div class="fixed-bg d-flex justify-content-center align-items-center">
+        <h2>A VARIETY OF GREAT DISHES</h2>
+      </div>
 
-        <div class="cartona container "  id="Choose">
-            <div class="row  ">
-                <div class="d-flex justify-content-center align-items-center flex-column mb-5 ">
-                    <h4 class="title-id">WHY CHOOSE US</h4>
-                    <img src="images/separator.svg" class="separator" alt="">
-                </div>
-                <div class="col-sm-6 col-md-3 mb-3 reveal reveal-special-two ">
-                    <div class="why-div">
-                        <div class="why-img">
-                            <img src="images/why-icon-2.png" class="h" alt="">
-                        </div>
-                        <div class="why-caption">
-                            <h5>Fresh Environment</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quasi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-3  reveal reveal-special-two">
-                    <div class="why-div">
-                        <div class="why-img">
-                            <img src="images/why-icon-3.png" alt="">
-                        </div>
-                        <div class="why-caption">
-                            <h5>Skilled Chefs</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quasi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-3  reveal reveal-special">
-                    <div class="why-div">
-                        <div class="why-img">
-                            <img src="images/why-icon-4.png" alt="">
-                        </div>
-                        <div class="why-caption">
-                            <h5>Event & Party</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quasi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-3  reveal reveal-special ">
-                    <div class="why-div">
-                        <div class="why-img">
-                            <img src="images/why-icon-1.png" alt="">
-                        </div>
-                        <div class="why-caption">
-                            <h5>Hygienic Food</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quasi</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="cartona container" id="Choose">
+        <div class="row">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column mb-5"
+          >
+            <h4 class="title-id">WHY CHOOSE US</h4>
+            <img src="images/separator.svg" class="separator" alt="" />
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 reveal reveal-special-two">
+            <div class="why-div">
+              <div class="why-img">
+                <img src="images/why-icon-2.png" class="h" alt="" />
+              </div>
+              <div class="why-caption">
+                <h5>Fresh Environment</h5>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+                  quasi
+                </p>
+              </div>
             </div>
-        </div>
-
-        <div class="cartona"  id="Chefs">
-            <div class="row  justify-content-evenly">
-                <div class="d-flex justify-content-center align-items-center flex-column mb-5">
-                    <h4 class="title-id">EXPERIENCED TEAM</h4>
-                    <img src="images/separator.svg" class="separator" alt="">
-                </div>
-
-                <div class=" d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special-two">
-                    <div class="team-img">
-                        <div class="team-img-layer d-flex justify-content-center align-items-center">
-                            <i class="fab fa-facebook mx-4 fa-2x"></i>
-                            <i class="fab fa-twitter mx-4 fa-2x"></i>
-                            <i class="fab fa-linkedin mx-4 fa-2x"></i>
-                        </div>
-                        <img src="images/team-1.jpg" alt="chef-one">
-                    </div>
-                    <div class="team-caption mt-3 d-flex flex-column ">
-                        <h3 class="">Willium Joe</h3>
-                        <span class="title-id">MASTER CHEF</span>
-                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
-                    </div>
-                </div>
-                <div class=" d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special-menu">
-
-                    <div class="team-img">
-                        <div class="team-img-layer d-flex justify-content-center align-items-center">
-                            <i class="fab fa-facebook mx-4 fa-2x"></i>
-                            <i class="fab fa-twitter mx-4 fa-2x"></i>
-                            <i class="fab fa-linkedin mx-4 fa-2x"></i>
-                        </div>
-                        <img src="images/team-2.jpg" class="" alt="">
-                    </div>
-                    <div class="team-caption mt-3 d-flex flex-column ">
-                        <h3 class="">Steave Den</h3>
-                        <span class="title-id">MASTER CHEF</span>
-                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
-                    </div>
-
-                </div>
-                <div class= "  d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special">
-
-                    <div class="team-img">
-                        <div class="team-img-layer d-flex justify-content-center align-items-center">
-                            <i class="fab fa-facebook mx-4 fa-2x"></i>
-                            <i class="fab fa-twitter mx-4 fa-2x"></i>
-                            <i class="fab fa-linkedin mx-4 fa-2x"></i>
-                        </div>
-                        <img src="images/team-3.jpg" class="" alt="">
-                    </div>
-                    <div class="team-caption mt-3 d-flex flex-column ">
-                        <h3 class="">Lily Sopy</h3>
-                        <span class="title-id">MASTER CHEF</span>
-                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
-                    </div>
-
-                </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 reveal reveal-special-two">
+            <div class="why-div">
+              <div class="why-img">
+                <img src="images/why-icon-3.png" alt="" />
+              </div>
+              <div class="why-caption">
+                <h5>Skilled Chefs</h5>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+                  quasi
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 reveal reveal-special">
+            <div class="why-div">
+              <div class="why-img">
+                <img src="images/why-icon-4.png" alt="" />
+              </div>
+              <div class="why-caption">
+                <h5>Event & Party</h5>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+                  quasi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 reveal reveal-special">
+            <div class="why-div">
+              <div class="why-img">
+                <img src="images/why-icon-1.png" alt="" />
+              </div>
+              <div class="why-caption">
+                <h5>Hygienic Food</h5>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+                  quasi
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="cartona" id="Chefs">
+        <div class="row justify-content-evenly">
+          <div
+            class="d-flex justify-content-center align-items-center flex-column mb-5"
+          >
+            <h4 class="title-id">EXPERIENCED TEAM</h4>
+            <img src="images/separator.svg" class="separator" alt="" />
+          </div>
+
+          <div
+            class="d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special-two"
+          >
+            <div class="team-img">
+              <div
+                class="team-img-layer d-flex justify-content-center align-items-center"
+              >
+                <i class="fab fa-facebook mx-4 fa-2x"></i>
+                <i class="fab fa-twitter mx-4 fa-2x"></i>
+                <i class="fab fa-linkedin mx-4 fa-2x"></i>
+              </div>
+              <img src="images/team-1.jpg" alt="chef-one" />
+            </div>
+            <div class="team-caption mt-3 d-flex flex-column">
+              <h3 class="">Willium Joe</h3>
+              <span class="title-id">MASTER CHEF</span>
+              <p>
+                Lorem Ipsum is simply dummy printing and typeset industry lorem
+                Ipsum has been the industrys.
+              </p>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special-menu"
+          >
+            <div class="team-img">
+              <div
+                class="team-img-layer d-flex justify-content-center align-items-center"
+              >
+                <i class="fab fa-facebook mx-4 fa-2x"></i>
+                <i class="fab fa-twitter mx-4 fa-2x"></i>
+                <i class="fab fa-linkedin mx-4 fa-2x"></i>
+              </div>
+              <img src="images/team-2.jpg" class="" alt="" />
+            </div>
+            <div class="team-caption mt-3 d-flex flex-column">
+              <h3 class="">Steave Den</h3>
+              <span class="title-id">MASTER CHEF</span>
+              <p>
+                Lorem Ipsum is simply dummy printing and typeset industry lorem
+                Ipsum has been the industrys.
+              </p>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center flex-column align-items-center col-md-3 mb-3 reveal reveal-special"
+          >
+            <div class="team-img">
+              <div
+                class="team-img-layer d-flex justify-content-center align-items-center"
+              >
+                <i class="fab fa-facebook mx-4 fa-2x"></i>
+                <i class="fab fa-twitter mx-4 fa-2x"></i>
+                <i class="fab fa-linkedin mx-4 fa-2x"></i>
+              </div>
+              <img src="images/team-3.jpg" class="" alt="" />
+            </div>
+            <div class="team-caption mt-3 d-flex flex-column">
+              <h3 class="">Lily Sopy</h3>
+              <span class="title-id">MASTER CHEF</span>
+              <p>
+                Lorem Ipsum is simply dummy printing and typeset industry lorem
+                Ipsum has been the industrys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <footer id="footer" class="p-3">
-        <div class="svg-tomatos">
-            <img src="images/bg-1.png" class="w-100" alt="">
+      <div class="svg-tomatos">
+        <img src="images/bg-1.png" class="w-100" alt="" />
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-evenly footer-details">
+          <div class="col-md-4 p-3 text-center">
+            <h4>About Us</h4>
+
+            <p>who we are</p>
+            <p>Administrators</p>
+            <p>Date of Establishment</p>
+          </div>
+
+          <div class="col-md-4 p-3 text-center footer-detail">
+            <h4>Contact Details</h4>
+            <p>
+              <a><i class="fa-solid fa-location-dot"></i></a> Manchester Road
+              123-78B, Silictown 7854MD, Great Country
+            </p>
+            <p>
+              <a><i class="fa-solid fa-phone"></i></a>+46 123 456 789
+            </p>
+            <p>
+              <a><i class="fa-solid fa-envelope"></i></a>hello@sitename.com
+            </p>
+          </div>
+          <div class="col-md-4 p-3 text-center footer-detail">
+            <h4>Opening Hours</h4>
+
+            <p>
+              <a><i class="fa-solid fa-caret-right"></i></a>saturday 10AM-9PM
+            </p>
+            <p>
+              <a><i class="fa-solid fa-caret-right"></i></a>Monday 10AM-9PM
+            </p>
+            <p>
+              <a><i class="fa-solid fa-caret-right"></i></a>Tuesday 10AM-9PM
+            </p>
+            <p>
+              <a><i class="fa-solid fa-caret-right"></i></a>Friday 10AM-10PM
+            </p>
+          </div>
         </div>
-        <div class="container-fluid">
-            <div class="row justify-content-evenly footer-details ">
-                <div class="col-md-4 p-3 text-center">
-                    <h4>About Us</h4>
+        <div class="fotter-logo text-center">
+          <div>
+            <img src="images/logo-footer.png" class="img-footer" alt="" />
+          </div>
 
-                    <p>who we are</p>
-                    <p> Administrators</p>
-                    <p>Date of Establishment</p>
-
-                </div>
-
-
-                <div class="col-md-4 p-3 text-center footer-detail">
-                    <h4>Contact Details</h4>
-                    <p><a><i class="fa-solid fa-location-dot "></i></a> Manchester Road 123-78B, Silictown 7854MD,
-                        Great Country</p>
-                    <p><a><i class="fa-solid fa-phone"></i></a>+46 123 456 789</p>
-                    <p><a><i class="fa-solid fa-envelope"></i></a>hello@sitename.com</p>
-
-                </div>
-                <div class="col-md-4 p-3 text-center footer-detail">
-                    <h4>Opening Hours</h4>
-
-                    <p><a><i class="fa-solid fa-caret-right"></i></a>saturday 10AM-9PM</p>
-                    <p><a><i class="fa-solid fa-caret-right"></i></a>Monday 10AM-9PM</p>
-                    <p><a><i class="fa-solid fa-caret-right"></i></a>Tuesday 10AM-9PM</p>
-                    <p><a><i class="fa-solid fa-caret-right"></i></a>Friday 10AM-10PM</p>
-
-                </div>
-            </div>
-            <div class=" fotter-logo text-center">
-                <div>
-                    <img src="images/logo-footer.png" class="img-footer" alt="">
-                </div>
-
-                <div class="d-flex justify-content-center mt-2">
-                    <a class="mx-3" href="#" target="_blank"><i
-                            class="fa-brands fa-facebook fa-2x"></i></a>
-                    <a class="mx-3" href="#" target="_blank"><i
-                            class="fa-brands fa-twitter fa-2x"></i></a>
-                    <a class="mx-3" href="#" target="_blank"><i
-                            class="fa-brands fa-youtube fa-2x"></i></a>
-                    <a class="mx-3" href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
-                    <a class="mx-3" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                </div>
-            </div>
+          <div class="d-flex justify-content-center mt-2">
+            <a class="mx-3" href="#" target="_blank"
+              ><i class="fa-brands fa-facebook fa-2x"></i
+            ></a>
+            <a class="mx-3" href="#" target="_blank"
+              ><i class="fa-brands fa-twitter fa-2x"></i
+            ></a>
+            <a class="mx-3" href="#" target="_blank"
+              ><i class="fa-brands fa-youtube fa-2x"></i
+            ></a>
+            <a class="mx-3" href="#"
+              ><i class="fa-brands fa-tiktok fa-2x"></i
+            ></a>
+            <a class="mx-3" href="#"
+              ><i class="fa-brands fa-instagram fa-2x"></i
+            ></a>
+          </div>
         </div>
-        <a href="#" class="arrow-up d-none"><i class="fa-solid fa-circle-arrow-up fa-2x"></i></a>
+      </div>
+      <a href="#" class="arrow-up d-none"
+        ><i class="fa-solid fa-circle-arrow-up fa-2x"></i
+      ></a>
     </footer>
 
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Recipe Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center" id="viewDetails">
-                    <!-- text from js -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn modal-btns" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn modal-btns">Order Now</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Recipe Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center" id="viewDetails">
+            <!-- text from js -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn modal-btns"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn modal-btns">Order Now</button>
+          </div>
         </div>
+      </div>
     </div>
-
-
-
-
-
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/about.js"></script>
-</body>
-
+  </body>
 </html>
